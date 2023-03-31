@@ -20,18 +20,38 @@ struct MainView: View {
             PhotosPickerContainerView(viewModel: vm.imagesPVM) {
                 AnyView(
                     Image(systemName: "photo.on.rectangle.angled")
+                        .resizable()
+                        .frame(width: 54, height: 54)
+                    
                 )
             }
             
+            Spacer().frame(height: 24)
+            
             PhotosPickerContainerView(viewModel: vm.videosPVM) {
                 AnyView(
+                    Image(systemName: "video.fill")
+                        .resizable()
+                        .frame(width: 54, height: 44)
+                    /*
+                    // Works but does not make sense with allowsHitTesting.
+                    // Buttons cant be used.
                     Button(action: {
                         let _ = print("Button2")
                     }, label: {
                         Text("Button2")
                     })
                     .allowsHitTesting(false)
+                    */
                 )
+            }
+            
+            Spacer().frame(height: 24)
+            
+            Button {
+                let _ = print("imagesPVM.selectedItems.count: \(self.vm.imagesPVM.selectedItems.count)")
+            } label: {
+                Text("Log Selections")
             }
 
         }

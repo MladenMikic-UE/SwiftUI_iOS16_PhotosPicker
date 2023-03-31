@@ -21,23 +21,10 @@ final class PhotosManagerViewModel: ObservableObject {
     init() {
         self.imagesPVM = .init(maxSelectionCount: nil, filter: .images)
         self.videosPVM = .init(maxSelectionCount: 1, filter: .videos)
+        self.setupPublishers()
     }
     
     private func setupPublishers() {
-        
-        self.$imagesPVM
-            .receive(on: RunLoop.main)
-            .sink { _ in
-                print("imagesPVM changed")
-            }
-            .store(in: &self.bag)
-        
-        self.$videosPVM
-            .receive(on: RunLoop.main)
-            .sink { _ in
-                print("imagesPVM changed")
-            }
-            .store(in: &self.bag)
         
         self.imagesPVM.$selectedItems
             .receive(on: RunLoop.main)

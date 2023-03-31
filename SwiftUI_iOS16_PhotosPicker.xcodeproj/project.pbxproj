@@ -60,8 +60,8 @@
 				F621EDA129D3FFC70026FF1A /* SwiftUI_iOS16_PhotosPickerApp.swift */,
 				F621EDA329D3FFC70026FF1A /* MainView.swift */,
 				F631300229D69C8800C76473 /* PhotosPickerContainerView.swift */,
-				F631300429D69CA300C76473 /* PhotosViewModel.swift */,
 				F631300629D69CFF00C76473 /* PhotosManagerViewModel.swift */,
+				F631300429D69CA300C76473 /* PhotosViewModel.swift */,
 				F621EDA529D3FFC80026FF1A /* Assets.xcassets */,
 				F621EDA729D3FFC80026FF1A /* Preview Content */,
 			);
