@@ -22,8 +22,10 @@ struct MainView: View {
                     Image(systemName: "photo.on.rectangle.angled")
                         .resizable()
                         .frame(width: 54, height: 54)
-                    
                 )
+            }
+            .onTapGesture {
+                print("TapGesture-1")
             }
             
             Spacer().frame(height: 24)

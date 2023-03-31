@@ -2,7 +2,7 @@
 //  PhotosPickerContainerView.swift
 //  SwiftUI_iOS16_PhotosPicker
 //
-//  Created by Mladen Mikić on 31.03.2023..
+//  Created by Mladen Mikić on 31.03.2023.
 //
 
 import SwiftUI
@@ -18,9 +18,13 @@ struct PhotosPickerContainerView: View {
     
     var body: some View {
         
-        PhotosPicker(selection: $viewModel.selectedItems,
+        PhotosPicker(selection: $viewModel.tmpSelectedItems,
                      maxSelectionCount: viewModel.maxSelectionCount,
                      matching: viewModel.filter, label: { photosButtonView() })
+        .onAppear {
+            // onAppear does not as expected and can not be used for state purposes.
+            let _ = print("\n.onAppear PhotosPickerContainerView")
+        }
         
     }
 }
