@@ -20,7 +20,7 @@ import SwiftUI
 struct SwiftUI_iOS16_PhotosPickerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
